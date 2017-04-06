@@ -4,10 +4,15 @@ import Nav from 'Nav';
 let Main = (props) => {
   return(
     <div>
-    <Nav></Nav>
-    <h1>Main component</h1>
-    {props.children}
-  </div>
+      <Nav></Nav>
+      <div className="row">
+        <div className="columns large-4 medium-6 small-centered">
+          {props.children}
+        </div>
+
+      </div>
+
+    </div>
   )
 };
 
