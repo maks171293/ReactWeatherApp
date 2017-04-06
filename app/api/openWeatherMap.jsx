@@ -14,7 +14,11 @@ export default {
         return res.data.main.temp;
       }
     }, function (res) {
-      throw new Error(res.data.message);
+      if(res.data === undefined){
+        throw new Error('City not found');
+      }else{
+        throw new Error(res.data.message);
+      }
     });
   }
 }
